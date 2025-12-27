@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explain This Camera - Adaptive Vision AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>📸 Explain This Camera</h1>
+            <p class="tagline">See the world through different lenses - Kid, Student, or Expert</p>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Camera Section -->
+            <section class="camera-section">
+                <div class="camera-container">
+                    <video id="camera" autoplay playsinline></video>
+                    <canvas id="canvas" style="display: none;"></canvas>
+                    <div id="camera-placeholder" class="placeholder">
+                        <p>📷</p>
+                        <p>Click "Start Camera" to begin</p>
+                    </div>
+                </div>
+
+                <!-- Camera Controls -->
+                <div class="camera-controls">
+                    <button id="start-camera-btn" class="btn btn-primary">Start Camera</button>
+                    <button id="stop-camera-btn" class="btn btn-secondary" style="display: none;">Stop Camera</button>
+                </div>
+            </section>
+
+            <!-- Controls Section -->
+            <section class="controls-section">
+                <div class="mode-selector">
+                    <label for="mode">Explanation Mode:</label>
+                    <select id="mode" class="mode-dropdown">
+                        <option value="kid">👶 Kid Mode - Simple & Friendly</option>
+                        <option value="student" selected>🎓 Student Mode - Educational</option>
+                        <option value="expert">🧠 Expert Mode - Technical</option>
+                    </select>
+                </div>
+
+                <button id="analyze-btn" class="btn btn-analyze" disabled>
+                    Explain What You See
+                </button>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section">
+                <div class="result-header">
+                    <h2>Explanation</h2>
+                    <span id="current-mode" class="mode-badge">🎓 Student Mode</span>
+                </div>
+
+                <div id="loading" class="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Analyzing image...</p>
+                </div>
+
+                <div id="result" class="result-box">
+                    <p class="placeholder-text">
+                        Point your camera at something interesting and click "Explain What You See" to get started!
+                    </p>
+                </div>
+
+                <div id="error" class="error-box" style="display: none;"></div>
+            </section>
+
+            <!-- Mode Descriptions -->
+            <section class="info-section">
+                <h3>How It Works</h3>
+                <div class="mode-cards">
+                    <div class="mode-card">
+                        <div class="mode-icon">👶</div>
+                        <h4>Kid Mode</h4>
+                        <p>Simple words, short sentences, fun comparisons. Perfect for explaining complex things to children.</p>
+                    </div>
+                    <div class="mode-card">
+                        <div class="mode-icon">🎓</div>
+                        <h4>Student Mode</h4>
+                        <p>Clear educational language with examples. Great for learning and understanding context.</p>
+                    </div>
+                    <div class="mode-card">
+                        <div class="mode-icon">🧠</div>
+                        <h4>Expert Mode</h4>
+                        <p>Precise technical terminology and detailed analysis. For specialists and professionals.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Built for hackathons • Powered by Gemini Vision AI • Adaptive Prompt Engineering</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
