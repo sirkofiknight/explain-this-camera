@@ -6,6 +6,28 @@ Point your camera at anything, and get explanations tailored for Kids, Students,
 
 ---
 
+## ⚡ **Quick Start (5 Minutes)**
+
+```bash
+# 1. Get FREE Gemini API key: https://makersuite.google.com/app/apikey
+
+# 2. Start Backend (Terminal 1)
+cd backend
+bash start.sh  # This handles everything: venv, dependencies, .env check
+
+# 3. Start Frontend (Terminal 2)
+cd frontend
+bash start.sh
+
+# 4. Open http://localhost:3000 and start exploring!
+```
+
+**💡 Tip:** Run `./test_connection.sh` to diagnose any issues!
+
+**🚨 Getting "Failed to fetch" error?** See [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
+
+---
+
 ## 🎯 Problem Statement
 
 Current AI vision systems provide one-size-fits-all explanations. A child and an expert seeing the same object get the same technical description. This creates:
